@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Básico: HTML, CSS e JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>O Universo do Desenvolvimento Web</h1>
+        <p>Uma introdução aos três pilares da web: HTML, CSS e JavaScript.</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="html" class="card">
+            <h2>HTML: A Estrutura da Página</h2>
+            <p>HTML (HyperText Markup Language) é a linguagem de marcação que usamos para estruturar o conteúdo de uma página web. Pense nele como o esqueleto de um corpo.</p>
+            <pre><code>&lt;h1&gt;Este é um título&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+&lt;button&gt;Isto é um botão&lt;/button&gt;</code></pre>
+            <p>Cada elemento, como títulos, parágrafos ou imagens, é definido por "tags" (etiquetas).</p>
+        </section>
+
+        <section id="css" class="card">
+            <h2>CSS: O Estilo e a Aparência</h2>
+            <p>CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar a nossa página. Se o HTML é o esqueleto, o CSS é a roupa, a pele, o cabelo e a maquiagem.</p>
+            <pre><code>h1 {
+    color: #2c3e50; /* Cor do texto */
+}
+
+button {
+    background-color: #3498db; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+}</code></pre>
+            <p>Com CSS, definimos cores, fontes, espaçamentos, layout e muito mais.</p>
+        </section>
+
+        <section id="js" class="card">
+            <h2>JavaScript: A Interatividade</h2>
+            <p>JavaScript (JS) é a linguagem de programação que dá vida à página. É o cérebro e os músculos, permitindo que a página responda às ações do usuário.</p>
+            <pre><code>document.getElementById('meuBotao').onclick = function() {
+    alert('Você clicou no botão!');
+};</code></pre>
+            <p>Ele manipula o HTML e o CSS para criar interações, validar formulários, carregar dados e muito mais.</p>
+        </section>
+
+        <section class="card interativo">
+            <h3>Teste a Interação!</h3>
+            <p>Clique no botão abaixo para ver o JavaScript em ação.</p>
+            <button id="botao-teste">Clique em mim!</button>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Página criada para aprendizado. Setembro de 2025.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
