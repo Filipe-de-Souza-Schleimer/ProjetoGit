@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Intensivo de Front-End</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container">
+            <h1>Curso Intensivo de Front-End</h1>
+            <p>Os três pilares do desenvolvimento web em uma única página.</p>
+        </div>
+    </header>
+
+    <nav class="menu-principal">
+        <div class="container">
+            <a href="index.html">&larr; Voltar para o Início</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#js">JavaScript</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="html" class="card-curso">
+            <div class="card-titulo">
+                <span>Capítulo 1</span>
+                <h2>HTML: A Linguagem da Estrutura</h2>
+            </div>
+            <p><strong>O que é?</strong> HTML (HyperText Markup Language) é o esqueleto da web. Ele não programa, ele descreve. Com "tags" (etiquetas), você marca seu conteúdo, dizendo ao navegador: "Isto é um título", "Isto é uma imagem", "Isto é um link".</p>
+            <h4>Tags Essenciais do Dia a Dia:</h4>
+            <ul>
+                <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Títulos e subtítulos.</li>
+                <li><code>&lt;p&gt;</code>: Parágrafos de texto.</li>
+                <li><code>&lt;a href="https://..."&gt;</code>: Links clicáveis.</li>
+                <li><code>&lt;img src="imagem.jpg" alt="descrição"&gt;</code>: Imagens (o `alt` é obrigatório para acessibilidade).</li>
+                <li><code>&lt;div&gt;</code>: Uma "caixa" genérica para agrupar elementos.</li>
+            </ul>
+        </section>
+
+        <section id="css" class="card-curso">
+            <div class="card-titulo">
+                <span>Capítulo 2</span>
+                <h2>CSS: A Linguagem do Estilo</h2>
+            </div>
+            <p><strong>O que é?</strong> CSS (Cascading Style Sheets) é a linguagem de design da web. Se o HTML é o esqueleto, o CSS é a roupa. Ele seleciona elementos HTML e aplica regras de estilo a eles.</p>
+            <h4>O Box Model: O Conceito MAIS Importante do CSS</h4>
+            <p>Todo elemento na tela é uma caixa. De dentro para fora, a caixa é composta por:</p>
+            <ol>
+                <li><strong>Conteúdo:</strong> O texto, a imagem, etc.</li>
+                <li><strong>Padding:</strong> Um espaçamento interno.</li>
+                <li><strong>Border:</strong> A borda da caixa.</li>
+                <li><strong>Margin:</strong> Um espaçamento externo, entre as caixas.</li>
+            </ol>
+        </section>
+
+        <section id="js" class="card-curso">
+            <div class="card-titulo">
+                <span>Capítulo 3</span>
+                <h2>JavaScript: A Linguagem da Interatividade</h2>
+            </div>
+            <p><strong>O que é?</strong> JavaScript (JS) é uma linguagem de programação que roda no navegador. Ele é o "cérebro" da página. O JS pode ouvir eventos (cliques, teclado) e alterar o HTML e o CSS em tempo real.</p>
+            <h4>Exemplo Interativo:</h4>
+            <div class="exemplo-interativo">
+                <p id="paragrafo-alvo">Este parágrafo pode ser alterado pelo JavaScript.</p>
+                <button id="botao-exemplo" class="botao">Clique Aqui</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2025 - Fim do Curso Intensivo. Hora de praticar!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

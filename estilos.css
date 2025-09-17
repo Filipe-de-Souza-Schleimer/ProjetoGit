@@ -1,0 +1,159 @@
+/* --- RESET E CONFIGURAÇÕES GLOBAIS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #0d1b2a;
+    --cor-secundaria: #1b263b;
+    --cor-texto-claro: #e0e1dd;
+    --cor-acento: #415a77;
+    --cor-link: #778da9;
+    --fonte-principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- CABEÇALHO E RODAPÉ (COMUNS) --- */
+.cabecalho-principal, .rodape-principal {
+    background-color: rgba(0,0,0,0.2);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-acento);
+}
+
+.rodape-principal {
+    border-bottom: none;
+    border-top: 1px solid var(--cor-acento);
+    margin-top: 2rem;
+}
+
+/* --- MENU DE NAVEGAÇÃO (PÁGINA DO CURSO) --- */
+.menu-principal {
+    background-color: var(--cor-secundaria);
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-suave);
+}
+
+.menu-principal a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.menu-principal a:hover {
+    color: var(--cor-link);
+}
+
+/* --- CONTEÚDO PRINCIPAL E CARDS --- */
+main {
+    padding: 2rem 0;
+}
+
+.card-curso {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-acento);
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.card-destaque {
+    text-align: center;
+}
+
+.card-titulo {
+    border-bottom: 2px solid var(--cor-acento);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.card-titulo span {
+    display: block;
+    font-size: 0.9em;
+    color: var(--cor-link);
+    margin-bottom: 0.5rem;
+}
+
+/* --- ELEMENTOS DE TEXTO E CÓDIGO --- */
+ul, ol {
+    padding-left: 20px;
+}
+li { margin-bottom: 0.5rem; }
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* --- BOTÕES E ELEMENTOS INTERATIVOS --- */
+.menu-de-projetos {
+    margin-top: 2rem;
+}
+.botao-projeto {
+    text-decoration: none;
+    background-color: var(--cor-acento);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.botao-projeto:hover {
+    background-color: var(--cor-link);
+    transform: translateY(-3px);
+}
+.botao-projeto span {
+    font-size: 0.9em;
+    display: block;
+    opacity: 0.8;
+}
+.botao-projeto strong {
+    font-size: 1.2em;
+}
+
+.exemplo-interativo {
+    background-color: var(--cor-primaria);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.botao {
+    background-color: var(--cor-link);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.botao:hover {
+    background-color: #92a4bf;
+}
