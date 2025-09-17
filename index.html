@@ -3,61 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Básico: HTML, CSS e JavaScript</title>
+    <title>Aula Completa: HTML, CSS e JavaScript</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <header class="cabecalho">
-        <h1>O Universo do Desenvolvimento Web</h1>
-        <p>Uma introdução aos três pilares da web: HTML, CSS e JavaScript.</p>
+    <header class="cabecalho-principal">
+        <div class="container">
+            <h1>O Universo do Desenvolvimento Web</h1>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#js">JavaScript</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        
-        <section id="html" class="card">
-            <h2>HTML: A Estrutura da Página</h2>
-            <p>HTML (HyperText Markup Language) é a linguagem de marcação que usamos para estruturar o conteúdo de uma página web. Pense nele como o esqueleto de um corpo.</p>
-            <pre><code>&lt;h1&gt;Este é um título&lt;/h1&gt;
-&lt;p&gt;Este é um parágrafo.&lt;/p&gt;
-&lt;button&gt;Isto é um botão&lt;/button&gt;</code></pre>
-            <p>Cada elemento, como títulos, parágrafos ou imagens, é definido por "tags" (etiquetas).</p>
-        </section>
+    <main class="container layout-grid">
+        <div class="conteudo-principal">
+            <article id="html" class="card">
+                <h2>Dia 1: HTML - A Estrutura Semântica</h2>
+                <p>HTML (HyperText Markup Language) é a espinha dorsal da web. A versão 5 (HTML5) introduziu <strong>tags semânticas</strong> que dão significado ao conteúdo, auxiliando na acessibilidade e SEO.</p>
+                <ul>
+                    <li><code>&lt;header&gt;</code>: Para o topo do site ou de uma seção.</li>
+                    <li><code>&lt;nav&gt;</code>: Para menus de navegação principais.</li>
+                    <li><code>&lt;main&gt;</code>: Delimita o conteúdo principal e único da página.</li>
+                    <li><code>&lt;article&gt;</code>: Para um bloco de conteúdo autocontido (um post de blog, uma notícia).</li>
+                    <li><code>&lt;aside&gt;</code>: Para conteúdo lateral, como uma barra de informações.</li>
+                    <li><code>&lt;footer&gt;</code>: Para o rodapé do site ou de uma seção.</li>
+                </ul>
+                <p>Usar a tag certa para o trabalho certo é o primeiro passo para se tornar um desenvolvedor profissional.</p>
+            </article>
 
-        <section id="css" class="card">
-            <h2>CSS: O Estilo e a Aparência</h2>
-            <p>CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar a nossa página. Se o HTML é o esqueleto, o CSS é a roupa, a pele, o cabelo e a maquiagem.</p>
-            <pre><code>h1 {
-    color: #2c3e50; /* Cor do texto */
-}
-
-button {
-    background-color: #3498db; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border-radius: 8px; /* Bordas arredondadas */
+            <article id="css" class="card">
+                <h2>Dia 2: CSS - Estilização e Layouts Responsivos</h2>
+                <p>CSS (Cascading Style Sheets) evoluiu de simples regras de cor para sistemas de layout complexos. Hoje, dominamos a aparência de um site com ferramentas como <strong>Flexbox</strong> e <strong>Grid Layout</strong>.</p>
+                <p>O <strong>Design Responsivo</strong> é crucial. Usando <em>Media Queries</em>, podemos adaptar o layout para que ele seja perfeito em qualquer dispositivo, do celular ao desktop.</p>
+                <pre><code>/* Exemplo de Media Query */
+@media (max-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+  }
 }</code></pre>
-            <p>Com CSS, definimos cores, fontes, espaçamentos, layout e muito mais.</p>
-        </section>
+            </article>
 
-        <section id="js" class="card">
-            <h2>JavaScript: A Interatividade</h2>
-            <p>JavaScript (JS) é a linguagem de programação que dá vida à página. É o cérebro e os músculos, permitindo que a página responda às ações do usuário.</p>
-            <pre><code>document.getElementById('meuBotao').onclick = function() {
-    alert('Você clicou no botão!');
-};</code></pre>
-            <p>Ele manipula o HTML e o CSS para criar interações, validar formulários, carregar dados e muito mais.</p>
-        </section>
+            <article id="js" class="card">
+                <h2>Dia 3: JavaScript - Dominando o DOM</h2>
+                <p>JavaScript (JS) nos permite manipular o Document Object Model (DOM) - a representação em árvore do nosso HTML. Em vez de modificar o HTML diretamente, usamos JS para reagir a eventos.</p>
+                <p>A forma moderna de fazer isso é adicionando ou removendo classes CSS com <code>element.classList.toggle('minha-classe')</code>. Isso mantém a lógica (JS) separada da estilização (CSS).</p>
+                <pre><code>const botao = document.querySelector('#meuBotao');
+const elemento = document.querySelector('.alvo');
 
-        <section class="card interativo">
-            <h3>Teste a Interação!</h3>
-            <p>Clique no botão abaixo para ver o JavaScript em ação.</p>
-            <button id="botao-teste">Clique em mim!</button>
-        </section>
-
+botao.addEventListener('click', () => {
+  elemento.classList.toggle('ativo');
+});</code></pre>
+            </article>
+        </div>
+        
+        <aside class="barra-lateral">
+            <div class="card interativo">
+                <h3>Interatividade em Ação</h3>
+                <p>Alterne entre os temas claro e escuro para ver o JS e as variáveis CSS funcionando em conjunto.</p>
+                <button id="theme-toggle" class="botao">Mudar para Modo Escuro</button>
+            </div>
+            <div class="card">
+                <h3>Formulários HTML</h3>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com">
+                    <button type="submit" class="botao">Enviar</button>
+                </form>
+            </div>
+        </aside>
     </main>
 
-    <footer class="rodape">
-        <p>Página criada para aprendizado. Setembro de 2025.</p>
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2025 - Curso de TADS - IFRS. Material de aula.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
